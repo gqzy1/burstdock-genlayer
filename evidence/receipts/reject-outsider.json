@@ -1,0 +1,62 @@
+{
+  "hash": "0xa3fa442fba63655572d3321735cbb37db8f8e07090ff96620f4dedad6d0cf910",
+  "from_address": "0x2754Fb78F830BbbeB1B621Aa137074552DE9E374",
+  "to_address": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+  "status": 7,
+  "statusName": "FINALIZED",
+  "result": 6,
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "data": {
+    "calldata": {
+      "base64": "FgRhcmdzHcwDMHhmYzEzYjY4MjY3OWIwNzFhMWQ1NTllOThhMTMwOWUzNjIxOGM5NTI0OmludmVudG9yeS1yZWFkCYQEMmZmZWE1ODYyZTY3MzdlYmQ3YTBjOTE4YzEyMjRiYzE4ZjA4OTYwNGE3MTc1MjRhMzQwOTMzOTkyMzE5NWVmNgZtZXRob2Q8YXBwcm92ZQ==",
+      "readable": "{\"args\":[\"0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read\",1,\"2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6\",]\"method\":\"approve\"}"
+    }
+  },
+  "consensus_data": {
+    "votes": {
+      "0x215c6BA80EdD9a47856D63E959A32AFE6B5Aa575": "idle",
+      "0x87DD12658711db28B41C1fBB516236088D214fAD": "idle",
+      "0x9e716966Fbc31a155250000CfC6C5E0aefbA9a95": "agree",
+      "0xAfA5B76d8c2b976097406893b59C499b5D92D878": "agree",
+      "0xbf44ED2c27E8Cc6b36FBF6890B8fDAD3b220cC88": "agree"
+    },
+    "leader_receipt": [
+      {
+        "mode": "leader",
+        "vote": null,
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Traceback (most recent call last):\n  File \"/py/libs/_genlayer_runner.py\", line 180, in <module>\n    _handle_main()\n    ~~~~~~~~~~~~^^\n  File \"/py/libs/_genlayer_runner.py\", line 170, in _handle_main\n    _give_result(\n    ~~~~~~~~~~~~^\n    \tlambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/py/libs/_genlayer_runner.py\", line 65, in _give_result\n    res = res_fn()\n  File \"/py/libs/_genlayer_runner.py\", line 171, in <lambda>\n    lambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 278, in approve\n    who = self._member(plan)\n  File \"/contract.py\", line 233, in _member\n    need(who in [m[\"address\"] for m in plan[\"input\"][\"members\"]], \"MEMBER_ONLY\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 31, in need\n    raise Exception(code)\nException: MEMBER_ONLY\n",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        },
+        "eq_outputs": {}
+      },
+      {
+        "mode": "validator",
+        "vote": "agree",
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Traceback (most recent call last):\n  File \"/py/libs/_genlayer_runner.py\", line 180, in <module>\n    _handle_main()\n    ~~~~~~~~~~~~^^\n  File \"/py/libs/_genlayer_runner.py\", line 170, in _handle_main\n    _give_result(\n    ~~~~~~~~~~~~^\n    \tlambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/py/libs/_genlayer_runner.py\", line 65, in _give_result\n    res = res_fn()\n  File \"/py/libs/_genlayer_runner.py\", line 171, in <lambda>\n    lambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 278, in approve\n    who = self._member(plan)\n  File \"/contract.py\", line 233, in _member\n    need(who in [m[\"address\"] for m in plan[\"input\"][\"members\"]], \"MEMBER_ONLY\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 31, in need\n    raise Exception(code)\nException: MEMBER_ONLY\n",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        }
+      }
+    ]
+  }
+}

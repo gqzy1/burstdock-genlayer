@@ -1,0 +1,142 @@
+{
+  "protocol": "burstdock-1",
+  "status": "DEPLOYED",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "sdk": "genlayer-js@1.1.8",
+  "address": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+  "sourceSha256": "8ff56c432efbf784e86bfa974636054cb2b4c8c1d679eb9dd84074aac17b03a8",
+  "deployTransaction": "0xba03c07f49cea69e1d879bd1aee1ea2e485c8ed5bac326caf19eb7e0ea077099",
+  "examplePlan": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+  "recordedWrites": [
+    {
+      "name": "seal-main",
+      "pending": {
+        "hash": "0xecfdaea25be0e64ebf3b7ec62192d02ba970829cad41309ba6abfa0e210fdd8d",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "seal",
+          "tag": "inventory-read",
+          "specification": {
+            "title": "Shared inventory refresh",
+            "operation": "reads",
+            "basis": "PUBLIC_DEFAULT",
+            "horizon_ms": 10000,
+            "members": [
+              {
+                "name": "Console",
+                "address": "0xfc13b682679b071a1d559e98a1309e36218c9524"
+              },
+              {
+                "name": "Indexer",
+                "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+              }
+            ],
+            "jobs": [
+              {
+                "label": "Inventory refresh",
+                "member": 0,
+                "units": 180,
+                "arrival_ms": 0
+              },
+              {
+                "label": "Index synchronization",
+                "member": 1,
+                "units": 170,
+                "arrival_ms": 0
+              }
+            ]
+          }
+        },
+        "submittedAt": "2026-11-17T23:14:47.073Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "assess-main",
+      "pending": {
+        "hash": "0xcd8f17566998dab87954bd2c80d162c0cfbae7bfb416a57184dfd3846d0bc99c",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "assess",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+          "revision": 0
+        },
+        "submittedAt": "2026-11-17T23:15:25.231Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "reject-outsider",
+      "pending": {
+        "hash": "0xa3fa442fba63655572d3321735cbb37db8f8e07090ff96620f4dedad6d0cf910",
+        "signer": "0x2754fb78f830bbbeb1b621aa137074552de9e374",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "approve",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+          "revision": 1,
+          "allocationHash": "2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6"
+        },
+        "submittedAt": "2026-11-17T23:16:38.589Z"
+      },
+      "expectedError": "MEMBER_ONLY"
+    },
+    {
+      "name": "approve-owner",
+      "pending": {
+        "hash": "0xebe87ca8c9d471e5441b06c4f1b232c23d365ea60f795055520ace948de1d65b",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "approve",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+          "revision": 1,
+          "allocationHash": "2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6"
+        },
+        "submittedAt": "2026-11-17T23:17:18.685Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "reject-duplicate",
+      "pending": {
+        "hash": "0xa129bdc57344b25a4f8fc0fa76cc9670fecd52385437fed11eae02f1c7b3fdbc",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "approve",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+          "revision": 2,
+          "allocationHash": "2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6"
+        },
+        "submittedAt": "2026-11-17T23:17:59.058Z"
+      },
+      "expectedError": "ALREADY_APPROVED"
+    },
+    {
+      "name": "approve-member",
+      "pending": {
+        "hash": "0xab948d5a6f36ea3cfdf41e8335b63fd2d4f6e13fc5b7858b207a0a999a90b94c",
+        "signer": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "approve",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+          "revision": 2,
+          "allocationHash": "2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6"
+        },
+        "submittedAt": "2026-11-17T23:18:37.815Z"
+      },
+      "expectedError": null
+    }
+  ]
+}

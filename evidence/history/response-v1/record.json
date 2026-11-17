@@ -1,0 +1,456 @@
+{
+  "kind": "real-stable-studionet-acceptance",
+  "deployment": {
+    "protocol": "burstdock-1",
+    "status": "DEPLOYED",
+    "chainId": 61999,
+    "rpc": "https://studio.genlayer.com/api",
+    "sdk": "genlayer-js@1.1.8",
+    "address": "0x8fB3ABbCf0b1F4644145ACF95740D21Cf578729b",
+    "sourceSha256": "b53fd672dd8bef78608c191d3b47fa1a817ff5361e8765f042fbfb2bfc747a47",
+    "deployTransaction": "0x5741275fd9ffbba335d2d4d8de10124833dfdbf9644c64f84bc71890b1267199"
+  },
+  "actors": {
+    "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+    "member": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+    "outsider": "0x2754fb78f830bbbeb1b621aa137074552de9e374"
+  },
+  "operations": [
+    {
+      "name": "seal-main",
+      "intent": {
+        "method": "seal",
+        "tag": "inventory-read",
+        "specification": {
+          "title": "Shared inventory refresh",
+          "operation": "reads",
+          "basis": "PUBLIC_DEFAULT",
+          "horizon_ms": 10000,
+          "members": [
+            {
+              "name": "Console",
+              "address": "0xfc13b682679b071a1d559e98a1309e36218c9524"
+            },
+            {
+              "name": "Indexer",
+              "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+            }
+          ],
+          "jobs": [
+            {
+              "label": "Inventory refresh",
+              "member": 0,
+              "units": 180,
+              "arrival_ms": 0
+            },
+            {
+              "label": "Index synchronization",
+              "member": 1,
+              "units": 170,
+              "arrival_ms": 0
+            }
+          ]
+        }
+      },
+      "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "phase": "VERIFIED",
+      "before": null,
+      "pending": {
+        "hash": "0x6971df6aca77955c44862a82a960f3ee419b6c42db8fbe86bd485d62c872d33b",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x8fB3ABbCf0b1F4644145ACF95740D21Cf578729b",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "seal",
+          "tag": "inventory-read",
+          "specification": {
+            "title": "Shared inventory refresh",
+            "operation": "reads",
+            "basis": "PUBLIC_DEFAULT",
+            "horizon_ms": 10000,
+            "members": [
+              {
+                "name": "Console",
+                "address": "0xfc13b682679b071a1d559e98a1309e36218c9524"
+              },
+              {
+                "name": "Indexer",
+                "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+              }
+            ],
+            "jobs": [
+              {
+                "label": "Inventory refresh",
+                "member": 0,
+                "units": 180,
+                "arrival_ms": 0
+              },
+              {
+                "label": "Index synchronization",
+                "member": 1,
+                "units": 170,
+                "arrival_ms": 0
+              }
+            ]
+          }
+        },
+        "submittedAt": "2026-11-17T23:06:32.070Z"
+      },
+      "timeoutChecked": {
+        "hash": "0x6971df6aca77955c44862a82a960f3ee419b6c42db8fbe86bd485d62c872d33b",
+        "code": "WAIT_TIMEOUT",
+        "resubmitted": false
+      },
+      "receipt": {
+        "hash": "0x6971df6aca77955c44862a82a960f3ee419b6c42db8fbe86bd485d62c872d33b",
+        "from_address": "0xfc13b682679B071a1d559E98A1309E36218c9524",
+        "to_address": "0x8fB3ABbCf0b1F4644145ACF95740D21Cf578729b",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "data": {
+          "calldata": {
+            "base64": "FgRhcmdzFXRpbnZlbnRvcnktcmVhZMwZeyJ0aXRsZSI6IlNoYXJlZCBpbnZlbnRvcnkgcmVmcmVzaCIsIm9wZXJhdGlvbiI6InJlYWRzIiwiYmFzaXMiOiJQVUJMSUNfREVGQVVMVCIsImhvcml6b25fbXMiOjEwMDAwLCJtZW1iZXJzIjpbeyJuYW1lIjoiQ29uc29sZSIsImFkZHJlc3MiOiIweGZjMTNiNjgyNjc5YjA3MWExZDU1OWU5OGExMzA5ZTM2MjE4Yzk1MjQifSx7Im5hbWUiOiJJbmRleGVyIiwiYWRkcmVzcyI6IjB4Y2E5NmE1MGIxNzY2ZDg5ZjYyZmNlM2I1ZjVkZDFkMmM2MDg1ZWJlMyJ9XSwiam9icyI6W3sibGFiZWwiOiJJbnZlbnRvcnkgcmVmcmVzaCIsIm1lbWJlciI6MCwidW5pdHMiOjE4MCwiYXJyaXZhbF9tcyI6MH0seyJsYWJlbCI6IkluZGV4IHN5bmNocm9uaXphdGlvbiIsIm1lbWJlciI6MSwidW5pdHMiOjE3MCwiYXJyaXZhbF9tcyI6MH1dfQZtZXRob2Qkc2VhbA==",
+            "readable": "{\"args\":[\"inventory-read\",\"{\\\"title\\\":\\\"Shared inventory refresh\\\",\\\"operation\\\":\\\"reads\\\",\\\"basis\\\":\\\"PUBLIC_DEFAULT\\\",\\\"horizon_ms\\\":10000,\\\"members\\\":[{\\\"name\\\":\\\"Console\\\",\\\"address\\\":\\\"0xfc13b682679b071a1d559e98a1309e36218c9524\\\"},{\\\"name\\\":\\\"Indexer\\\",\\\"address\\\":\\\"0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3\\\"}],\\\"jobs\\\":[{\\\"label\\\":\\\"Inventory refresh\\\",\\\"member\\\":0,\\\"units\\\":180,\\\"arrival_ms\\\":0},{\\\"label\\\":\\\"Index synchronization\\\",\\\"member\\\":1,\\\"units\\\":170,\\\"arrival_ms\\\":0}]}\",]\"method\":\"seal\"}"
+          }
+        },
+        "consensus_data": {
+          "votes": {
+            "0x3720CfC92ACB431F215673A7b5F315B5efe1A4D6": "idle",
+            "0x91d3032d39177dD187665b345954fA5809D8a574": "agree",
+            "0x9e9A34d5C2E5B5f494a010a7dfA62eA54113645E": "idle",
+            "0xbf44ED2c27E8Cc6b36FBF6890B8fDAD3b220cC88": "agree",
+            "0xc0570E16E935531dee442333d199fCdA4Ba9e6f1": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "vote": null,
+              "execution_result": "SUCCESS",
+              "genvm_result": {
+                "stderr": "",
+                "stdout": "",
+                "raw_error": null,
+                "error_code": null,
+                "error_description": null
+              },
+              "result": {
+                "raw": "AMwDMHhmYzEzYjY4MjY3OWIwNzFhMWQ1NTllOThhMTMwOWUzNjIxOGM5NTI0OmludmVudG9yeS1yZWFk",
+                "status": "return",
+                "payload": {
+                  "raw": [
+                    204,
+                    3,
+                    48,
+                    120,
+                    102,
+                    99,
+                    49,
+                    51,
+                    98,
+                    54,
+                    56,
+                    50,
+                    54,
+                    55,
+                    57,
+                    98,
+                    48,
+                    55,
+                    49,
+                    97,
+                    49,
+                    100,
+                    53,
+                    53,
+                    57,
+                    101,
+                    57,
+                    56,
+                    97,
+                    49,
+                    51,
+                    48,
+                    57,
+                    101,
+                    51,
+                    54,
+                    50,
+                    49,
+                    56,
+                    99,
+                    57,
+                    53,
+                    50,
+                    52,
+                    58,
+                    105,
+                    110,
+                    118,
+                    101,
+                    110,
+                    116,
+                    111,
+                    114,
+                    121,
+                    45,
+                    114,
+                    101,
+                    97,
+                    100
+                  ],
+                  "readable": "\"0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read\""
+                }
+              },
+              "eq_outputs": {}
+            },
+            {
+              "mode": "validator",
+              "vote": "agree",
+              "execution_result": "SUCCESS",
+              "genvm_result": {
+                "stderr": "",
+                "stdout": "",
+                "raw_error": null,
+                "error_code": null,
+                "error_description": null
+              },
+              "result": {
+                "raw": "AMwDMHhmYzEzYjY4MjY3OWIwNzFhMWQ1NTllOThhMTMwOWUzNjIxOGM5NTI0OmludmVudG9yeS1yZWFk",
+                "status": "return",
+                "payload": {
+                  "raw": [
+                    204,
+                    3,
+                    48,
+                    120,
+                    102,
+                    99,
+                    49,
+                    51,
+                    98,
+                    54,
+                    56,
+                    50,
+                    54,
+                    55,
+                    57,
+                    98,
+                    48,
+                    55,
+                    49,
+                    97,
+                    49,
+                    100,
+                    53,
+                    53,
+                    57,
+                    101,
+                    57,
+                    56,
+                    97,
+                    49,
+                    51,
+                    48,
+                    57,
+                    101,
+                    51,
+                    54,
+                    50,
+                    49,
+                    56,
+                    99,
+                    57,
+                    53,
+                    50,
+                    52,
+                    58,
+                    105,
+                    110,
+                    118,
+                    101,
+                    110,
+                    116,
+                    111,
+                    114,
+                    121,
+                    45,
+                    114,
+                    101,
+                    97,
+                    100
+                  ],
+                  "readable": "\"0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read\""
+                }
+              }
+            }
+          ]
+        }
+      },
+      "plan": {
+        "approvals": [],
+        "id": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "input": {
+          "basis": "PUBLIC_DEFAULT",
+          "horizon_ms": 10000,
+          "jobs": [
+            {
+              "arrival_ms": 0,
+              "label": "Inventory refresh",
+              "member": 0,
+              "units": 180
+            },
+            {
+              "arrival_ms": 0,
+              "label": "Index synchronization",
+              "member": 1,
+              "units": 170
+            }
+          ],
+          "members": [
+            {
+              "address": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+              "name": "Console"
+            },
+            {
+              "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+              "name": "Indexer"
+            }
+          ],
+          "operation": "reads",
+          "title": "Shared inventory refresh"
+        },
+        "input_hash": "aaf3e34cea0d2719afd854e78e28e763e6248802d426adb3b28ad8c13a200bec",
+        "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "revision": 0,
+        "state": "SEALED"
+      },
+      "variant": "latest-final",
+      "verifiedAt": "2026-11-17T23:07:10.712Z",
+      "verified": true
+    }
+  ],
+  "unsuccessfulAssessment": {
+    "pending": {
+      "hash": "0xd43b1c4432a3a82132b1319a62fa28d17361952e9901d83c5dbfd83f6d2903da",
+      "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "contract": "0x8fB3ABbCf0b1F4644145ACF95740D21Cf578729b",
+      "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+      "intent": {
+        "method": "assess",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "revision": 0
+      },
+      "submittedAt": "2026-11-17T23:07:12.685Z"
+    },
+    "receipt": {
+      "hash": "0xd43b1c4432a3a82132b1319a62fa28d17361952e9901d83c5dbfd83f6d2903da",
+      "from_address": "0xfc13b682679B071a1d559E98A1309E36218c9524",
+      "to_address": "0x8fB3ABbCf0b1F4644145ACF95740D21Cf578729b",
+      "status": 7,
+      "statusName": "FINALIZED",
+      "result": 7,
+      "leader_only": false,
+      "execution_mode": "NORMAL",
+      "data": {
+        "calldata": {
+          "base64": "FgRhcmdzFcwDMHhmYzEzYjY4MjY3OWIwNzFhMWQ1NTllOThhMTMwOWUzNjIxOGM5NTI0OmludmVudG9yeS1yZWFkAQZtZXRob2Q0YXNzZXNz",
+          "readable": "{\"args\":[\"0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read\",0,]\"method\":\"assess\"}"
+        }
+      },
+      "consensus_data": {
+        "votes": {
+          "0x3720CfC92ACB431F215673A7b5F315B5efe1A4D6": "idle",
+          "0x5Bf68b9b661C86D6083B2F67faf19fF649a8a203": "disagree",
+          "0x70C9Ed8761ac32887e536D03657bfADAD436210F": "idle",
+          "0xAfA5B76d8c2b976097406893b59C499b5D92D878": "disagree",
+          "0xc3Acc646761d7BC43a47ccEB1F60E7078B1d51Fc": "disagree"
+        },
+        "leader_receipt": [
+          {
+            "mode": "leader",
+            "vote": null,
+            "execution_result": "ERROR",
+            "genvm_result": {
+              "stderr": "Traceback (most recent call last):\n  File \"/py/libs/_genlayer_runner.py\", line 193, in <module>\n    _give_result(lambda: runner(stage_data))\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/py/libs/_genlayer_runner.py\", line 65, in _give_result\n    res = res_fn()\n  File \"/py/libs/_genlayer_runner.py\", line 193, in <lambda>\n    _give_result(lambda: runner(stage_data))\n                         ~~~~~~^^^^^^^^^^^^\n  File \"/py/libs/genlayer/gl/vm.py\", line 181, in <lambda>\n    'data_leader': cloudpickle.dumps(lambda _: leader_fn()),\n                                               ~~~~~~~~~^^\n  File \"/contract.py\", line 259, in leader\n    observation, _ = observe(data)\n                     ~~~~~~~^^^^^^\n  File \"/contract.py\", line 142, in observe\n    source, source_hash = source_text(SOURCE_URL)\n                          ~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/contract.py\", line 98, in source_text\n    need(response.status_code == 200, \"SOURCE_HTTP\")\n         ^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Response' object has no attribute 'status_code'\n",
+              "stdout": "",
+              "raw_error": null,
+              "error_code": null,
+              "error_description": null
+            },
+            "result": {
+              "raw": "AmV4aXRfY29kZSAx",
+              "status": "contract_error",
+              "payload": "exit_code 1"
+            },
+            "eq_outputs": {
+              "0": {
+                "raw": "AmV4aXRfY29kZSAx",
+                "status": "contract_error",
+                "payload": "exit_code 1"
+              }
+            }
+          },
+          {
+            "mode": "validator",
+            "vote": "disagree",
+            "execution_result": "ERROR",
+            "genvm_result": {
+              "stderr": "",
+              "stdout": "",
+              "raw_error": null,
+              "error_code": null,
+              "error_description": null
+            },
+            "result": {
+              "raw": "AmV4aXRfY29kZSAx",
+              "status": "contract_error",
+              "payload": "exit_code 1"
+            }
+          }
+        ]
+      }
+    },
+    "readback": {
+      "approvals": [],
+      "id": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+      "input": {
+        "basis": "PUBLIC_DEFAULT",
+        "horizon_ms": 10000,
+        "jobs": [
+          {
+            "arrival_ms": 0,
+            "label": "Inventory refresh",
+            "member": 0,
+            "units": 180
+          },
+          {
+            "arrival_ms": 0,
+            "label": "Index synchronization",
+            "member": 1,
+            "units": 170
+          }
+        ],
+        "members": [
+          {
+            "address": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+            "name": "Console"
+          },
+          {
+            "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+            "name": "Indexer"
+          }
+        ],
+        "operation": "reads",
+        "title": "Shared inventory refresh"
+      },
+      "input_hash": "aaf3e34cea0d2719afd854e78e28e763e6248802d426adb3b28ad8c13a200bec",
+      "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "revision": 0,
+      "state": "SEALED"
+    },
+    "classification": "FINALIZED execution ERROR with no majority agreement; response-interface compatibility error. No READY or COMMITTED claim."
+  }
+}

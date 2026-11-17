@@ -1,0 +1,111 @@
+{
+  "kind": "read-only-rpc-schema-compilation",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "sourceSha256": "8ff56c432efbf784e86bfa974636054cb2b4c8c1d679eb9dd84074aac17b03a8",
+  "observedAt": "2026-11-17T23:16:14.850Z",
+  "schema": {
+    "ctor": {
+      "params": [],
+      "kwparams": {}
+    },
+    "methods": {
+      "approve": {
+        "params": [
+          [
+            "plan_id",
+            "string"
+          ],
+          [
+            "expected_revision",
+            "int"
+          ],
+          [
+            "allocation_hash",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "string",
+        "payable": false
+      },
+      "assess": {
+        "params": [
+          [
+            "plan_id",
+            "string"
+          ],
+          [
+            "expected_revision",
+            "int"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "string",
+        "payable": false
+      },
+      "cancel": {
+        "params": [
+          [
+            "plan_id",
+            "string"
+          ],
+          [
+            "expected_revision",
+            "int"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "string",
+        "payable": false
+      },
+      "get_plan": {
+        "params": [
+          [
+            "plan_id",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": true,
+        "ret": "string"
+      },
+      "list_plans": {
+        "params": [
+          [
+            "owner",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": true,
+        "ret": "string"
+      },
+      "protocol": {
+        "params": [],
+        "kwparams": {},
+        "readonly": true,
+        "ret": "string"
+      },
+      "seal": {
+        "params": [
+          [
+            "tag",
+            "string"
+          ],
+          [
+            "payload",
+            "string"
+          ]
+        ],
+        "kwparams": {},
+        "readonly": false,
+        "ret": "string",
+        "payable": false
+      }
+    }
+  }
+}

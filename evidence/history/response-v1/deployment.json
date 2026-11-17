@@ -1,0 +1,10 @@
+{
+  "protocol": "burstdock-1",
+  "status": "DEPLOYED",
+  "chainId": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "sdk": "genlayer-js@1.1.8",
+  "address": "0x8fB3ABbCf0b1F4644145ACF95740D21Cf578729b",
+  "sourceSha256": "b53fd672dd8bef78608c191d3b47fa1a817ff5361e8765f042fbfb2bfc747a47",
+  "deployTransaction": "0x5741275fd9ffbba335d2d4d8de10124833dfdbf9644c64f84bc71890b1267199"
+}

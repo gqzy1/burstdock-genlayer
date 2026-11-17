@@ -1,0 +1,17 @@
+test_input_roster_limits_and_immutable_namespace (test_contract.ContractTests.test_input_roster_limits_and_immutable_namespace) ... ok
+test_known_reason_omission_is_normalized (test_contract.ContractTests.test_known_reason_omission_is_normalized) ... ok
+test_literal_number_and_source_snapshot_checks (test_contract.ContractTests.test_literal_number_and_source_snapshot_checks) ... ok
+test_member_revision_digest_and_duplicate_boundaries (test_contract.ContractTests.test_member_revision_digest_and_duplicate_boundaries) ... ok
+test_model_disagreement_anchor_scope_and_service_errors_fail_closed (test_contract.ContractTests.test_model_disagreement_anchor_scope_and_service_errors_fail_closed) ... ok
+test_pinned_runner_response_status_interface (test_contract.ContractTests.test_pinned_runner_response_status_interface) ... ok
+test_realistic_signed_lifecycle_and_fifo_credit (test_contract.ContractTests.test_realistic_signed_lifecycle_and_fifo_credit) ... ok
+test_unknown_json_object_is_business_review_not_error (test_contract.ContractTests.test_unknown_json_object_is_business_review_not_error) ... ok
+test_user_labels_never_reach_model_prompt (test_contract.ContractTests.test_user_labels_never_reach_model_prompt) ... ok
+test_fractional_refill_residue_and_minimal_millisecond (test_contract.ScheduleTests.test_fractional_refill_residue_and_minimal_millisecond) ... ok
+test_idle_cap_fifo_and_capacity_horizon_blockers (test_contract.ScheduleTests.test_idle_cap_fifo_and_capacity_horizon_blockers) ... ok
+test_independent_tick_oracle_1200_plans (test_contract.ScheduleTests.test_independent_tick_oracle_1200_plans) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.031s
+
+OK

@@ -1,0 +1,44 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> burstdock-genlayer@1.0.0 test
+> python -m unittest discover -s tests -v && npm run test:sdk
+
+test_input_roster_limits_and_immutable_namespace (test_contract.ContractTests.test_input_roster_limits_and_immutable_namespace) ... ok
+test_literal_number_and_source_snapshot_checks (test_contract.ContractTests.test_literal_number_and_source_snapshot_checks) ... ok
+test_member_revision_digest_and_duplicate_boundaries (test_contract.ContractTests.test_member_revision_digest_and_duplicate_boundaries) ... ok
+test_model_disagreement_anchor_scope_and_service_errors_fail_closed (test_contract.ContractTests.test_model_disagreement_anchor_scope_and_service_errors_fail_closed) ... ok
+test_realistic_signed_lifecycle_and_fifo_credit (test_contract.ContractTests.test_realistic_signed_lifecycle_and_fifo_credit) ... ok
+test_unknown_json_object_is_business_review_not_error (test_contract.ContractTests.test_unknown_json_object_is_business_review_not_error) ... ok
+test_user_labels_never_reach_model_prompt (test_contract.ContractTests.test_user_labels_never_reach_model_prompt) ... ok
+test_fractional_refill_residue_and_minimal_millisecond (test_contract.ScheduleTests.test_fractional_refill_residue_and_minimal_millisecond) ... ok
+test_idle_cap_fifo_and_capacity_horizon_blockers (test_contract.ScheduleTests.test_idle_cap_fifo_and_capacity_horizon_blockers) ... ok
+test_independent_tick_oracle_1200_plans (test_contract.ScheduleTests.test_independent_tick_oracle_1200_plans) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.028s
+
+OK
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> burstdock-genlayer@1.0.0 test:sdk
+> node --import tsx --test tests/sdk.test.ts
+
+✔ Stable Studionet receipt validates real SDK encoded calldata (2.985081ms)
+✔ provisional, failure, majority, signer, destination, hash, consensus and calldata are checked (2.202809ms)
+✔ modern SDK receipt also fails closed on missing consensus (0.270649ms)
+✔ readback verifies revision, hash and signed member even after concurrent later approval (0.492985ms)
+✔ resume polls the SAME hash, accepts only finalized success plus latest-final read (8.8539ms)
+✔ timeout and network failure never submit another write (0.714971ms)
+✔ readback distinguishes unsuccessful assessment from successful transaction (0.262857ms)
+✔ JSON response and argument serialization reject invalid data (0.215385ms)
+✔ wallet guard rechecks the actual provider network and account immediately before signing (1.255186ms)
+✔ SDK numeric receipt status uses official mapping and never promotes ACCEPTED (0.981954ms)
+✔ nonzero gas price stops zero-cost writes (0.681049ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1124.099822
