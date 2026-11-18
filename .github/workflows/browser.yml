@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 22
       - run: npm ci --ignore-scripts
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install chromium
       - run: node scripts/browser-check.mjs
         env:
           BURSTDOCK_URL: https://gqzy1.github.io/burstdock-genlayer/

@@ -18,7 +18,7 @@ try {
   await page.getByText('Credit before', {exact:true}).waitFor();
   await page.getByRole('tab', {name:'Source', exact:true}).click();
   await page.getByText('KNOWN', {exact:true}).waitFor();
-  await page.getByRole('tab', {name:'Consent', exact:true}).click();
+  await page.getByRole('tab', {name:/^Consent\b/}).click();
   await page.getByText('Indexer', {exact:true}).first().waitFor();
   await page.getByRole('tab', {name:'Queue', exact:true}).click();
   await page.screenshot({path:'artifacts/browser-desktop.jpg', quality:88});
