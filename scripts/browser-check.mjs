@@ -15,7 +15,7 @@ try {
   await page.getByText('Shared inventory refresh', {exact: true}).first().waitFor(wait);
   await page.getByText('COMMITTED', {exact: true}).first().waitFor(wait);
   await page.getByRole('tab', {name:'Proof', exact:true}).click();
-  await page.getByRole('columnheader', {name:'Credit before'}).waitFor();
+  await page.getByText('Credit before', {exact:true}).waitFor();
   await page.getByRole('tab', {name:'Source', exact:true}).click();
   await page.getByText('KNOWN', {exact:true}).waitFor();
   await page.getByRole('tab', {name:'Consent', exact:true}).click();

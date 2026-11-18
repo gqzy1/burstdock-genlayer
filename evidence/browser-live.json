@@ -1,0 +1,325 @@
+{
+  "kind": "real-browser-chain-acceptance",
+  "site": "https://gqzy1.github.io/burstdock-genlayer/",
+  "chainId": 61999,
+  "address": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+  "sourceSha256": "8ff56c432efbf784e86bfa974636054cb2b4c8c1d679eb9dd84074aac17b03a8",
+  "observedAt": "2026-11-18T03:18:32.084Z",
+  "operations": [
+    {
+      "pending": {
+        "hash": "0x11b02b2fc37966f20b83d929d29956044537dba5df212add08c71d02e373e2c0",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "signer": "0x3C2D057dbB08073cb73214074D6B148F6722DBEc",
+        "planId": "0x3c2d057dbb08073cb73214074d6b148f6722dbec:browser-inventory",
+        "intent": {
+          "method": "seal",
+          "tag": "browser-inventory",
+          "specification": {
+            "title": "Browser inventory runway",
+            "operation": "reads",
+            "basis": "PUBLIC_DEFAULT",
+            "horizon_ms": 10000,
+            "members": [
+              {
+                "name": "Console",
+                "address": "0x3C2D057dbB08073cb73214074D6B148F6722DBEc"
+              },
+              {
+                "name": "Indexer",
+                "address": "0xd3F38f15405427B3226d7F91E0085Ff2097Dc0DD"
+              }
+            ],
+            "jobs": [
+              {
+                "label": "Inventory refresh",
+                "member": 0,
+                "units": 180,
+                "arrival_ms": 0
+              },
+              {
+                "label": "Index synchronization",
+                "member": 1,
+                "units": 170,
+                "arrival_ms": 0
+              }
+            ]
+          }
+        }
+      },
+      "receipt": {
+        "hash": "0x11b02b2fc37966f20b83d929d29956044537dba5df212add08c71d02e373e2c0",
+        "from_address": "0x3C2D057dbB08073cb73214074D6B148F6722DBEc",
+        "to_address": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "status": 7,
+        "statusName": "FINALIZED",
+        "result": 6,
+        "leader_only": false,
+        "execution_mode": "NORMAL",
+        "data": {
+          "calldata": {
+            "base64": "FgRhcmdzFYwBYnJvd3Nlci1pbnZlbnRvcnnMGXsidGl0bGUiOiJCcm93c2VyIGludmVudG9yeSBydW53YXkiLCJvcGVyYXRpb24iOiJyZWFkcyIsImJhc2lzIjoiUFVCTElDX0RFRkFVTFQiLCJob3Jpem9uX21zIjoxMDAwMCwibWVtYmVycyI6W3sibmFtZSI6IkNvbnNvbGUiLCJhZGRyZXNzIjoiMHgzQzJEMDU3ZGJCMDgwNzNjYjczMjE0MDc0RDZCMTQ4RjY3MjJEQkVjIn0seyJuYW1lIjoiSW5kZXhlciIsImFkZHJlc3MiOiIweGQzRjM4ZjE1NDA1NDI3QjMyMjZkN0Y5MUUwMDg1RmYyMDk3RGMwREQifV0sImpvYnMiOlt7ImxhYmVsIjoiSW52ZW50b3J5IHJlZnJlc2giLCJtZW1iZXIiOjAsInVuaXRzIjoxODAsImFycml2YWxfbXMiOjB9LHsibGFiZWwiOiJJbmRleCBzeW5jaHJvbml6YXRpb24iLCJtZW1iZXIiOjEsInVuaXRzIjoxNzAsImFycml2YWxfbXMiOjB9XX0GbWV0aG9kJHNlYWw=",
+            "readable": "{\"args\":[\"browser-inventory\",\"{\\\"title\\\":\\\"Browser inventory runway\\\",\\\"operation\\\":\\\"reads\\\",\\\"basis\\\":\\\"PUBLIC_DEFAULT\\\",\\\"horizon_ms\\\":10000,\\\"members\\\":[{\\\"name\\\":\\\"Console\\\",\\\"address\\\":\\\"0x3C2D057dbB08073cb73214074D6B148F6722DBEc\\\"},{\\\"name\\\":\\\"Indexer\\\",\\\"address\\\":\\\"0xd3F38f15405427B3226d7F91E0085Ff2097Dc0DD\\\"}],\\\"jobs\\\":[{\\\"label\\\":\\\"Inventory refresh\\\",\\\"member\\\":0,\\\"units\\\":180,\\\"arrival_ms\\\":0},{\\\"label\\\":\\\"Index synchronization\\\",\\\"member\\\":1,\\\"units\\\":170,\\\"arrival_ms\\\":0}]}\",]\"method\":\"seal\"}"
+          }
+        },
+        "consensus_data": {
+          "votes": {
+            "0x70C9Ed8761ac32887e536D03657bfADAD436210F": "agree",
+            "0x8D9E52A3c9Ad95D2Be9987AD2C3919F5460DDc3e": "agree",
+            "0x91d3032d39177dD187665b345954fA5809D8a574": "agree",
+            "0xc0570E16E935531dee442333d199fCdA4Ba9e6f1": "idle",
+            "0xc3Acc646761d7BC43a47ccEB1F60E7078B1d51Fc": "agree"
+          },
+          "leader_receipt": [
+            {
+              "mode": "leader",
+              "vote": null,
+              "execution_result": "SUCCESS",
+              "genvm_result": {
+                "stderr": "",
+                "stdout": "",
+                "raw_error": null,
+                "error_code": null,
+                "error_description": null
+              },
+              "result": {
+                "raw": "AOQDMHgzYzJkMDU3ZGJiMDgwNzNjYjczMjE0MDc0ZDZiMTQ4ZjY3MjJkYmVjOmJyb3dzZXItaW52ZW50b3J5",
+                "status": "return",
+                "payload": {
+                  "raw": [
+                    228,
+                    3,
+                    48,
+                    120,
+                    51,
+                    99,
+                    50,
+                    100,
+                    48,
+                    53,
+                    55,
+                    100,
+                    98,
+                    98,
+                    48,
+                    56,
+                    48,
+                    55,
+                    51,
+                    99,
+                    98,
+                    55,
+                    51,
+                    50,
+                    49,
+                    52,
+                    48,
+                    55,
+                    52,
+                    100,
+                    54,
+                    98,
+                    49,
+                    52,
+                    56,
+                    102,
+                    54,
+                    55,
+                    50,
+                    50,
+                    100,
+                    98,
+                    101,
+                    99,
+                    58,
+                    98,
+                    114,
+                    111,
+                    119,
+                    115,
+                    101,
+                    114,
+                    45,
+                    105,
+                    110,
+                    118,
+                    101,
+                    110,
+                    116,
+                    111,
+                    114,
+                    121
+                  ],
+                  "readable": "\"0x3c2d057dbb08073cb73214074d6b148f6722dbec:browser-inventory\""
+                }
+              },
+              "eq_outputs": {}
+            },
+            {
+              "mode": "validator",
+              "vote": "agree",
+              "execution_result": "SUCCESS",
+              "genvm_result": {
+                "stderr": "",
+                "stdout": "",
+                "raw_error": null,
+                "error_code": null,
+                "error_description": null
+              },
+              "result": {
+                "raw": "AOQDMHgzYzJkMDU3ZGJiMDgwNzNjYjczMjE0MDc0ZDZiMTQ4ZjY3MjJkYmVjOmJyb3dzZXItaW52ZW50b3J5",
+                "status": "return",
+                "payload": {
+                  "raw": [
+                    228,
+                    3,
+                    48,
+                    120,
+                    51,
+                    99,
+                    50,
+                    100,
+                    48,
+                    53,
+                    55,
+                    100,
+                    98,
+                    98,
+                    48,
+                    56,
+                    48,
+                    55,
+                    51,
+                    99,
+                    98,
+                    55,
+                    51,
+                    50,
+                    49,
+                    52,
+                    48,
+                    55,
+                    52,
+                    100,
+                    54,
+                    98,
+                    49,
+                    52,
+                    56,
+                    102,
+                    54,
+                    55,
+                    50,
+                    50,
+                    100,
+                    98,
+                    101,
+                    99,
+                    58,
+                    98,
+                    114,
+                    111,
+                    119,
+                    115,
+                    101,
+                    114,
+                    45,
+                    105,
+                    110,
+                    118,
+                    101,
+                    110,
+                    116,
+                    111,
+                    114,
+                    121
+                  ],
+                  "readable": "\"0x3c2d057dbb08073cb73214074d6b148f6722dbec:browser-inventory\""
+                }
+              }
+            }
+          ]
+        }
+      },
+      "plan": {
+        "approvals": [],
+        "id": "0x3c2d057dbb08073cb73214074d6b148f6722dbec:browser-inventory",
+        "input": {
+          "basis": "PUBLIC_DEFAULT",
+          "horizon_ms": 10000,
+          "jobs": [
+            {
+              "arrival_ms": 0,
+              "label": "Inventory refresh",
+              "member": 0,
+              "units": 180
+            },
+            {
+              "arrival_ms": 0,
+              "label": "Index synchronization",
+              "member": 1,
+              "units": 170
+            }
+          ],
+          "members": [
+            {
+              "address": "0x3c2d057dbb08073cb73214074d6b148f6722dbec",
+              "name": "Console"
+            },
+            {
+              "address": "0xd3f38f15405427b3226d7f91e0085ff2097dc0dd",
+              "name": "Indexer"
+            }
+          ],
+          "operation": "reads",
+          "title": "Browser inventory runway"
+        },
+        "input_hash": "8f1aa7173c1d867cabe582f8ec8ba02e924083caaf69df681181892b2351e48f",
+        "owner": "0x3c2d057dbb08073cb73214074d6b148f6722dbec",
+        "revision": 0,
+        "state": "SEALED"
+      },
+      "variant": "latest-final"
+    }
+  ],
+  "finalPlans": {
+    "0x3c2d057dbb08073cb73214074d6b148f6722dbec:browser-inventory": {
+      "approvals": [],
+      "id": "0x3c2d057dbb08073cb73214074d6b148f6722dbec:browser-inventory",
+      "input": {
+        "basis": "PUBLIC_DEFAULT",
+        "horizon_ms": 10000,
+        "jobs": [
+          {
+            "arrival_ms": 0,
+            "label": "Inventory refresh",
+            "member": 0,
+            "units": 180
+          },
+          {
+            "arrival_ms": 0,
+            "label": "Index synchronization",
+            "member": 1,
+            "units": 170
+          }
+        ],
+        "members": [
+          {
+            "address": "0x3c2d057dbb08073cb73214074d6b148f6722dbec",
+            "name": "Console"
+          },
+          {
+            "address": "0xd3f38f15405427b3226d7f91e0085ff2097dc0dd",
+            "name": "Indexer"
+          }
+        ],
+        "operation": "reads",
+        "title": "Browser inventory runway"
+      },
+      "input_hash": "8f1aa7173c1d867cabe582f8ec8ba02e924083caaf69df681181892b2351e48f",
+      "owner": "0x3c2d057dbb08073cb73214074d6b148f6722dbec",
+      "revision": 0,
+      "state": "SEALED"
+    }
+  }
+}

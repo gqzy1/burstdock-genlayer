@@ -1,0 +1,62 @@
+{
+  "hash": "0xa129bdc57344b25a4f8fc0fa76cc9670fecd52385437fed11eae02f1c7b3fdbc",
+  "from_address": "0xfc13b682679B071a1d559E98A1309E36218c9524",
+  "to_address": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+  "status": 7,
+  "statusName": "FINALIZED",
+  "result": 6,
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "data": {
+    "calldata": {
+      "base64": "FgRhcmdzHcwDMHhmYzEzYjY4MjY3OWIwNzFhMWQ1NTllOThhMTMwOWUzNjIxOGM5NTI0OmludmVudG9yeS1yZWFkEYQEMmZmZWE1ODYyZTY3MzdlYmQ3YTBjOTE4YzEyMjRiYzE4ZjA4OTYwNGE3MTc1MjRhMzQwOTMzOTkyMzE5NWVmNgZtZXRob2Q8YXBwcm92ZQ==",
+      "readable": "{\"args\":[\"0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read\",2,\"2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6\",]\"method\":\"approve\"}"
+    }
+  },
+  "consensus_data": {
+    "votes": {
+      "0x29A864a96A51c4e816ef65E95f18F0dfF2165569": "agree",
+      "0x5Bf68b9b661C86D6083B2F67faf19fF649a8a203": "idle",
+      "0x70C9Ed8761ac32887e536D03657bfADAD436210F": "agree",
+      "0xD40f99BB049b50311f7d0C4E76fAd47bD12C9774": "agree",
+      "0xbf44ED2c27E8Cc6b36FBF6890B8fDAD3b220cC88": "idle"
+    },
+    "leader_receipt": [
+      {
+        "mode": "leader",
+        "vote": null,
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Traceback (most recent call last):\n  File \"/py/libs/_genlayer_runner.py\", line 180, in <module>\n    _handle_main()\n    ~~~~~~~~~~~~^^\n  File \"/py/libs/_genlayer_runner.py\", line 170, in _handle_main\n    _give_result(\n    ~~~~~~~~~~~~^\n    \tlambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/py/libs/_genlayer_runner.py\", line 65, in _give_result\n    res = res_fn()\n  File \"/py/libs/_genlayer_runner.py\", line 171, in <lambda>\n    lambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 281, in approve\n    need(who not in plan[\"approvals\"], \"ALREADY_APPROVED\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 31, in need\n    raise Exception(code)\nException: ALREADY_APPROVED\n",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        },
+        "eq_outputs": {}
+      },
+      {
+        "mode": "validator",
+        "vote": "agree",
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Traceback (most recent call last):\n  File \"/py/libs/_genlayer_runner.py\", line 180, in <module>\n    _handle_main()\n    ~~~~~~~~~~~~^^\n  File \"/py/libs/_genlayer_runner.py\", line 170, in _handle_main\n    _give_result(\n    ~~~~~~~~~~~~^\n    \tlambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/py/libs/_genlayer_runner.py\", line 65, in _give_result\n    res = res_fn()\n  File \"/py/libs/_genlayer_runner.py\", line 171, in <lambda>\n    lambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 281, in approve\n    need(who not in plan[\"approvals\"], \"ALREADY_APPROVED\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 31, in need\n    raise Exception(code)\nException: ALREADY_APPROVED\n",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        }
+      }
+    ]
+  }
+}

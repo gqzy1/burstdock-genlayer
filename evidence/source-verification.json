@@ -1,0 +1,455 @@
+{
+  "kind": "read-only-live-evidence-reverification",
+  "chainId": 61999,
+  "sourceSha256": "8ff56c432efbf784e86bfa974636054cb2b4c8c1d679eb9dd84074aac17b03a8",
+  "onchainSha256": "8ff56c432efbf784e86bfa974636054cb2b4c8c1d679eb9dd84074aac17b03a8",
+  "sourceMatch": true,
+  "observedAt": "2026-11-18T03:18:38.298Z",
+  "deployment": "0xba03c07f49cea69e1d879bd1aee1ea2e485c8ed5bac326caf19eb7e0ea077099",
+  "operations": [
+    {
+      "name": "seal-main",
+      "hash": "0xecfdaea25be0e64ebf3b7ec62192d02ba970829cad41309ba6abfa0e210fdd8d",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "assess-main",
+      "hash": "0xcd8f17566998dab87954bd2c80d162c0cfbae7bfb416a57184dfd3846d0bc99c",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "reject-outsider",
+      "hash": "0xa3fa442fba63655572d3321735cbb37db8f8e07090ff96620f4dedad6d0cf910",
+      "status": "FINALIZED",
+      "expectedError": "MEMBER_ONLY",
+      "verified": true
+    },
+    {
+      "name": "approve-owner",
+      "hash": "0xebe87ca8c9d471e5441b06c4f1b232c23d365ea60f795055520ace948de1d65b",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "reject-duplicate",
+      "hash": "0xa129bdc57344b25a4f8fc0fa76cc9670fecd52385437fed11eae02f1c7b3fdbc",
+      "status": "FINALIZED",
+      "expectedError": "ALREADY_APPROVED",
+      "verified": true
+    },
+    {
+      "name": "approve-member",
+      "hash": "0xab948d5a6f36ea3cfdf41e8335b63fd2d4f6e13fc5b7858b207a0a999a90b94c",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "reject-terminal",
+      "hash": "0xe81dde110c832bb3d994a2bbd4231a454bd3fbc6b475cb1d38e4921136f8f3fe",
+      "status": "FINALIZED",
+      "expectedError": "TERMINAL",
+      "verified": true
+    },
+    {
+      "name": "seal-cancel",
+      "hash": "0xab65a37a3e99fd5d6803edd146eb9933c586325ab829d779decde1fae24fcc0f",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "cancel",
+      "hash": "0x511e7ad54086b5e77bf86c0c024c08a979c67edbf4d6246bf51682691664f11b",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "seal-blocked",
+      "hash": "0x120520da6e20578a6f47b07bc3384a42786145294748212fd928ad11c98090e6",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "assess-blocked",
+      "hash": "0x811da839605491d9f255d79b3c1e5eb9e4b92866f632459cf0651ca2e188f90f",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "seal-review",
+      "hash": "0x83ea65bd4a98fb558120ac53fa3e04c34ad421dc75cb776b3bffbdafaa322ce0",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    },
+    {
+      "name": "assess-review",
+      "hash": "0x8ac0ad0167455a07628e07667d8a2def362ceeff0d0180580231cd94519f51ab",
+      "status": "FINALIZED",
+      "expectedError": null,
+      "verified": true
+    }
+  ],
+  "finalPlan": {
+    "allocation_hash": "2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6",
+    "approvals": [
+      "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+    ],
+    "id": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+    "input": {
+      "basis": "PUBLIC_DEFAULT",
+      "horizon_ms": 10000,
+      "jobs": [
+        {
+          "arrival_ms": 0,
+          "label": "Inventory refresh",
+          "member": 0,
+          "units": 180
+        },
+        {
+          "arrival_ms": 0,
+          "label": "Index synchronization",
+          "member": 1,
+          "units": 170
+        }
+      ],
+      "members": [
+        {
+          "address": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+          "name": "Console"
+        },
+        {
+          "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+          "name": "Indexer"
+        }
+      ],
+      "operation": "reads",
+      "title": "Shared inventory refresh"
+    },
+    "input_hash": "aaf3e34cea0d2719afd854e78e28e763e6248802d426adb3b28ad8c13a200bec",
+    "observation": {
+      "policy": {
+        "algorithm": "TOKEN_BUCKET",
+        "burst": 250,
+        "evidence": {
+          "algorithm": "token bucket algorithm",
+          "burst": "250",
+          "qualified": "The limits might be smaller for free or trial customers",
+          "rate": "25",
+          "scope": "per subscription, per service principal, and per operation type"
+        },
+        "qualified": true,
+        "rate": 25,
+        "reason": "",
+        "scope": "SUBSCRIPTION_PRINCIPAL_OPERATION_REGION",
+        "status": "KNOWN"
+      },
+      "source_sha256": "92908429502828ded733d4c41d0383970b547705609fc100e68272c49778b312"
+    },
+    "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+    "proof": {
+      "blockers": [],
+      "capacity_milli": 250000,
+      "finish_ms": 4000,
+      "rate_per_second": 25,
+      "remaining_milli": 0,
+      "rows": [
+        {
+          "admit_ms": 0,
+          "after_milli": 70000,
+          "arrival_ms": 0,
+          "before_milli": 250000,
+          "consumed_milli": 180000,
+          "job": 0,
+          "member": 0,
+          "refill_wait_ms": 0,
+          "wait_ms": 0
+        },
+        {
+          "admit_ms": 4000,
+          "after_milli": 0,
+          "arrival_ms": 0,
+          "before_milli": 170000,
+          "consumed_milli": 170000,
+          "job": 1,
+          "member": 1,
+          "refill_wait_ms": 4000,
+          "wait_ms": 4000
+        }
+      ],
+      "status": "READY",
+      "total_requests": 350
+    },
+    "revision": 3,
+    "state": "COMMITTED"
+  },
+  "finalPlans": {
+    "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read": {
+      "allocation_hash": "2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6",
+      "approvals": [
+        "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+      ],
+      "id": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+      "input": {
+        "basis": "PUBLIC_DEFAULT",
+        "horizon_ms": 10000,
+        "jobs": [
+          {
+            "arrival_ms": 0,
+            "label": "Inventory refresh",
+            "member": 0,
+            "units": 180
+          },
+          {
+            "arrival_ms": 0,
+            "label": "Index synchronization",
+            "member": 1,
+            "units": 170
+          }
+        ],
+        "members": [
+          {
+            "address": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+            "name": "Console"
+          },
+          {
+            "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+            "name": "Indexer"
+          }
+        ],
+        "operation": "reads",
+        "title": "Shared inventory refresh"
+      },
+      "input_hash": "aaf3e34cea0d2719afd854e78e28e763e6248802d426adb3b28ad8c13a200bec",
+      "observation": {
+        "policy": {
+          "algorithm": "TOKEN_BUCKET",
+          "burst": 250,
+          "evidence": {
+            "algorithm": "token bucket algorithm",
+            "burst": "250",
+            "qualified": "The limits might be smaller for free or trial customers",
+            "rate": "25",
+            "scope": "per subscription, per service principal, and per operation type"
+          },
+          "qualified": true,
+          "rate": 25,
+          "reason": "",
+          "scope": "SUBSCRIPTION_PRINCIPAL_OPERATION_REGION",
+          "status": "KNOWN"
+        },
+        "source_sha256": "92908429502828ded733d4c41d0383970b547705609fc100e68272c49778b312"
+      },
+      "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "proof": {
+        "blockers": [],
+        "capacity_milli": 250000,
+        "finish_ms": 4000,
+        "rate_per_second": 25,
+        "remaining_milli": 0,
+        "rows": [
+          {
+            "admit_ms": 0,
+            "after_milli": 70000,
+            "arrival_ms": 0,
+            "before_milli": 250000,
+            "consumed_milli": 180000,
+            "job": 0,
+            "member": 0,
+            "refill_wait_ms": 0,
+            "wait_ms": 0
+          },
+          {
+            "admit_ms": 4000,
+            "after_milli": 0,
+            "arrival_ms": 0,
+            "before_milli": 170000,
+            "consumed_milli": 170000,
+            "job": 1,
+            "member": 1,
+            "refill_wait_ms": 4000,
+            "wait_ms": 4000
+          }
+        ],
+        "status": "READY",
+        "total_requests": 350
+      },
+      "revision": 3,
+      "state": "COMMITTED"
+    },
+    "0xfc13b682679b071a1d559e98a1309e36218c9524:cancel-example": {
+      "approvals": [],
+      "cancelled_by": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+      "id": "0xfc13b682679b071a1d559e98a1309e36218c9524:cancel-example",
+      "input": {
+        "basis": "PUBLIC_DEFAULT",
+        "horizon_ms": 10000,
+        "jobs": [
+          {
+            "arrival_ms": 0,
+            "label": "Inventory refresh",
+            "member": 0,
+            "units": 180
+          },
+          {
+            "arrival_ms": 0,
+            "label": "Index synchronization",
+            "member": 1,
+            "units": 170
+          }
+        ],
+        "members": [
+          {
+            "address": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+            "name": "Console"
+          },
+          {
+            "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+            "name": "Indexer"
+          }
+        ],
+        "operation": "reads",
+        "title": "Cancelled launch"
+      },
+      "input_hash": "bcf24f5c66d401c956ca8bc00861a80e4c541d88a79d739e123d19f4f54dfa1a",
+      "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "revision": 1,
+      "state": "CANCELLED"
+    },
+    "0xfc13b682679b071a1d559e98a1309e36218c9524:oversized-batch": {
+      "allocation_hash": "e5288b441310c051f5e327e36489525dacbfb978293fb1b1c7a26fb9048d7af9",
+      "approvals": [],
+      "id": "0xfc13b682679b071a1d559e98a1309e36218c9524:oversized-batch",
+      "input": {
+        "basis": "PUBLIC_DEFAULT",
+        "horizon_ms": 10000,
+        "jobs": [
+          {
+            "arrival_ms": 0,
+            "label": "Inventory refresh",
+            "member": 0,
+            "units": 251
+          },
+          {
+            "arrival_ms": 0,
+            "label": "Index synchronization",
+            "member": 1,
+            "units": 170
+          }
+        ],
+        "members": [
+          {
+            "address": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+            "name": "Console"
+          },
+          {
+            "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+            "name": "Indexer"
+          }
+        ],
+        "operation": "reads",
+        "title": "Indivisible burst overflow"
+      },
+      "input_hash": "2ff95880bda3f360819fa5841b89264c5d514d85df94d4abc9a47c665e08dbbc",
+      "observation": {
+        "policy": {
+          "algorithm": "TOKEN_BUCKET",
+          "burst": 250,
+          "evidence": {
+            "algorithm": "token bucket algorithm",
+            "burst": "250",
+            "qualified": "limits might be smaller for free or trial customers",
+            "rate": "25",
+            "scope": "per subscription, per service principal, and per operation type"
+          },
+          "qualified": true,
+          "rate": 25,
+          "reason": "",
+          "scope": "SUBSCRIPTION_PRINCIPAL_OPERATION_REGION",
+          "status": "KNOWN"
+        },
+        "source_sha256": "92908429502828ded733d4c41d0383970b547705609fc100e68272c49778b312"
+      },
+      "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "proof": {
+        "capacity": 250,
+        "job": 0,
+        "reason": "INDIVISIBLE_BATCH_EXCEEDS_BURST",
+        "requested": 251,
+        "rows": [],
+        "status": "BLOCKED"
+      },
+      "revision": 1,
+      "state": "BLOCKED"
+    },
+    "0xfc13b682679b071a1d559e98a1309e36218c9524:trial-review": {
+      "allocation_hash": "1248f9e7596cdb495df42f9d54b27f86d0756c43e8b1320186a78ef18cb12def",
+      "approvals": [],
+      "id": "0xfc13b682679b071a1d559e98a1309e36218c9524:trial-review",
+      "input": {
+        "basis": "FREE_TRIAL",
+        "horizon_ms": 10000,
+        "jobs": [
+          {
+            "arrival_ms": 0,
+            "label": "Inventory refresh",
+            "member": 0,
+            "units": 180
+          },
+          {
+            "arrival_ms": 0,
+            "label": "Index synchronization",
+            "member": 1,
+            "units": 170
+          }
+        ],
+        "members": [
+          {
+            "address": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+            "name": "Console"
+          },
+          {
+            "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+            "name": "Indexer"
+          }
+        ],
+        "operation": "reads",
+        "title": "Free trial entitlement review"
+      },
+      "input_hash": "42bff4bd08a0ae5871d19535cd90dc3d9f0368998f5ee36094fe17c77eae3ee1",
+      "observation": {
+        "policy": {
+          "algorithm": null,
+          "burst": null,
+          "evidence": {},
+          "qualified": null,
+          "rate": null,
+          "reason": "FREE_TRIAL basis cannot establish an actual account bucket from the public reference; the source notes limits might be smaller for free or trial customers, so the documented default subscription read values cannot be applied.",
+          "scope": null,
+          "status": "UNKNOWN"
+        },
+        "source_sha256": "92908429502828ded733d4c41d0383970b547705609fc100e68272c49778b312"
+      },
+      "owner": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+      "proof": {
+        "reason": "FREE_TRIAL basis cannot establish an actual account bucket from the public reference; the source notes limits might be smaller for free or trial customers, so the documented default subscription read values cannot be applied.",
+        "rows": [],
+        "status": "REVIEW"
+      },
+      "revision": 1,
+      "state": "REVIEW"
+    }
+  },
+  "variant": "latest-final"
+}

@@ -1,0 +1,62 @@
+{
+  "hash": "0xe81dde110c832bb3d994a2bbd4231a454bd3fbc6b475cb1d38e4921136f8f3fe",
+  "from_address": "0xCA96A50B1766D89f62fcE3b5F5dd1D2C6085eBe3",
+  "to_address": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+  "status": 7,
+  "statusName": "FINALIZED",
+  "result": 6,
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "data": {
+    "calldata": {
+      "base64": "FgRhcmdzFcwDMHhmYzEzYjY4MjY3OWIwNzFhMWQ1NTllOThhMTMwOWUzNjIxOGM5NTI0OmludmVudG9yeS1yZWFkGQZtZXRob2Q0Y2FuY2Vs",
+      "readable": "{\"args\":[\"0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read\",3,]\"method\":\"cancel\"}"
+    }
+  },
+  "consensus_data": {
+    "votes": {
+      "0x215c6BA80EdD9a47856D63E959A32AFE6B5Aa575": "agree",
+      "0x29A864a96A51c4e816ef65E95f18F0dfF2165569": "idle",
+      "0x8D9E52A3c9Ad95D2Be9987AD2C3919F5460DDc3e": "agree",
+      "0x91d3032d39177dD187665b345954fA5809D8a574": "agree",
+      "0xbf44ED2c27E8Cc6b36FBF6890B8fDAD3b220cC88": "agree"
+    },
+    "leader_receipt": [
+      {
+        "mode": "leader",
+        "vote": null,
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Traceback (most recent call last):\n  File \"/py/libs/_genlayer_runner.py\", line 180, in <module>\n    _handle_main()\n    ~~~~~~~~~~~~^^\n  File \"/py/libs/_genlayer_runner.py\", line 170, in _handle_main\n    _give_result(\n    ~~~~~~~~~~~~^\n    \tlambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/py/libs/_genlayer_runner.py\", line 65, in _give_result\n    res = res_fn()\n  File \"/py/libs/_genlayer_runner.py\", line 171, in <lambda>\n    lambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 294, in cancel\n    need(plan[\"state\"] in [\"SEALED\", \"READY\", \"REVIEW\", \"BLOCKED\"], \"TERMINAL\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 31, in need\n    raise Exception(code)\nException: TERMINAL\n",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        },
+        "eq_outputs": {}
+      },
+      {
+        "mode": "validator",
+        "vote": "agree",
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "Traceback (most recent call last):\n  File \"/py/libs/_genlayer_runner.py\", line 180, in <module>\n    _handle_main()\n    ~~~~~~~~~~~~^^\n  File \"/py/libs/_genlayer_runner.py\", line 170, in _handle_main\n    _give_result(\n    ~~~~~~~~~~~~^\n    \tlambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/py/libs/_genlayer_runner.py\", line 65, in _give_result\n    res = res_fn()\n  File \"/py/libs/_genlayer_runner.py\", line 171, in <lambda>\n    lambda: meth2call(contract_instance, *cd.get('args', []), **cd.get('kwargs', {}))\n            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 294, in cancel\n    need(plan[\"state\"] in [\"SEALED\", \"READY\", \"REVIEW\", \"BLOCKED\"], \"TERMINAL\")\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/contract.py\", line 31, in need\n    raise Exception(code)\nException: TERMINAL\n",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "result": {
+          "raw": "AmV4aXRfY29kZSAx",
+          "status": "contract_error",
+          "payload": "exit_code 1"
+        }
+      }
+    ]
+  }
+}

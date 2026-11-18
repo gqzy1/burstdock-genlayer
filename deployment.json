@@ -8,6 +8,9 @@
   "sourceSha256": "8ff56c432efbf784e86bfa974636054cb2b4c8c1d679eb9dd84074aac17b03a8",
   "deployTransaction": "0xba03c07f49cea69e1d879bd1aee1ea2e485c8ed5bac326caf19eb7e0ea077099",
   "examplePlan": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+  "cancelledPlan": "0xfc13b682679b071a1d559e98a1309e36218c9524:cancel-example",
+  "blockedPlan": "0xfc13b682679b071a1d559e98a1309e36218c9524:oversized-batch",
+  "reviewPlan": "0xfc13b682679b071a1d559e98a1309e36218c9524:trial-review",
   "recordedWrites": [
     {
       "name": "seal-main",
@@ -135,6 +138,205 @@
           "allocationHash": "2ffea5862e6737ebd7a0c918c1224bc18f089604a717524a3409339923195ef6"
         },
         "submittedAt": "2026-11-17T23:18:37.815Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "reject-terminal",
+      "pending": {
+        "hash": "0xe81dde110c832bb3d994a2bbd4231a454bd3fbc6b475cb1d38e4921136f8f3fe",
+        "signer": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+        "intent": {
+          "method": "cancel",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:inventory-read",
+          "revision": 3
+        },
+        "submittedAt": "2026-11-17T23:19:18.219Z"
+      },
+      "expectedError": "TERMINAL"
+    },
+    {
+      "name": "seal-cancel",
+      "pending": {
+        "hash": "0xab65a37a3e99fd5d6803edd146eb9933c586325ab829d779decde1fae24fcc0f",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:cancel-example",
+        "intent": {
+          "method": "seal",
+          "tag": "cancel-example",
+          "specification": {
+            "title": "Cancelled launch",
+            "operation": "reads",
+            "basis": "PUBLIC_DEFAULT",
+            "horizon_ms": 10000,
+            "members": [
+              {
+                "name": "Console",
+                "address": "0xfc13b682679b071a1d559e98a1309e36218c9524"
+              },
+              {
+                "name": "Indexer",
+                "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+              }
+            ],
+            "jobs": [
+              {
+                "label": "Inventory refresh",
+                "member": 0,
+                "units": 180,
+                "arrival_ms": 0
+              },
+              {
+                "label": "Index synchronization",
+                "member": 1,
+                "units": 170,
+                "arrival_ms": 0
+              }
+            ]
+          }
+        },
+        "submittedAt": "2026-11-17T23:20:00.180Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "cancel",
+      "pending": {
+        "hash": "0x511e7ad54086b5e77bf86c0c024c08a979c67edbf4d6246bf51682691664f11b",
+        "signer": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:cancel-example",
+        "intent": {
+          "method": "cancel",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:cancel-example",
+          "revision": 0
+        },
+        "submittedAt": "2026-11-17T23:20:50.297Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "seal-blocked",
+      "pending": {
+        "hash": "0x120520da6e20578a6f47b07bc3384a42786145294748212fd928ad11c98090e6",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:oversized-batch",
+        "intent": {
+          "method": "seal",
+          "tag": "oversized-batch",
+          "specification": {
+            "title": "Indivisible burst overflow",
+            "operation": "reads",
+            "basis": "PUBLIC_DEFAULT",
+            "horizon_ms": 10000,
+            "members": [
+              {
+                "name": "Console",
+                "address": "0xfc13b682679b071a1d559e98a1309e36218c9524"
+              },
+              {
+                "name": "Indexer",
+                "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+              }
+            ],
+            "jobs": [
+              {
+                "label": "Inventory refresh",
+                "member": 0,
+                "units": 251,
+                "arrival_ms": 0
+              },
+              {
+                "label": "Index synchronization",
+                "member": 1,
+                "units": 170,
+                "arrival_ms": 0
+              }
+            ]
+          }
+        },
+        "submittedAt": "2026-11-17T23:21:34.162Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "assess-blocked",
+      "pending": {
+        "hash": "0x811da839605491d9f255d79b3c1e5eb9e4b92866f632459cf0651ca2e188f90f",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:oversized-batch",
+        "intent": {
+          "method": "assess",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:oversized-batch",
+          "revision": 0
+        },
+        "submittedAt": "2026-11-17T23:22:14.525Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "seal-review",
+      "pending": {
+        "hash": "0x83ea65bd4a98fb558120ac53fa3e04c34ad421dc75cb776b3bffbdafaa322ce0",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:trial-review",
+        "intent": {
+          "method": "seal",
+          "tag": "trial-review",
+          "specification": {
+            "title": "Free trial entitlement review",
+            "operation": "reads",
+            "basis": "FREE_TRIAL",
+            "horizon_ms": 10000,
+            "members": [
+              {
+                "name": "Console",
+                "address": "0xfc13b682679b071a1d559e98a1309e36218c9524"
+              },
+              {
+                "name": "Indexer",
+                "address": "0xca96a50b1766d89f62fce3b5f5dd1d2c6085ebe3"
+              }
+            ],
+            "jobs": [
+              {
+                "label": "Inventory refresh",
+                "member": 0,
+                "units": 180,
+                "arrival_ms": 0
+              },
+              {
+                "label": "Index synchronization",
+                "member": 1,
+                "units": 170,
+                "arrival_ms": 0
+              }
+            ]
+          }
+        },
+        "submittedAt": "2026-11-18T03:16:45.000Z"
+      },
+      "expectedError": null
+    },
+    {
+      "name": "assess-review",
+      "pending": {
+        "hash": "0x8ac0ad0167455a07628e07667d8a2def362ceeff0d0180580231cd94519f51ab",
+        "signer": "0xfc13b682679b071a1d559e98a1309e36218c9524",
+        "contract": "0x68585d0107029E43089fa3CE8335aa0Ba52B579A",
+        "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:trial-review",
+        "intent": {
+          "method": "assess",
+          "planId": "0xfc13b682679b071a1d559e98a1309e36218c9524:trial-review",
+          "revision": 0
+        },
+        "submittedAt": "2026-11-18T03:17:24.699Z"
       },
       "expectedError": null
     }
