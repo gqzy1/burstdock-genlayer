@@ -29,3 +29,7 @@ npm run verify:live
 ```
 
 The last two commands use the Stable Studionet RPC for read-only verification. See [deployment.json](deployment.json) for the release identity and [evidence](evidence/) for finalized receipts, provenance and readbacks. [Protocol and evidence guide](docs/PROTOCOL.md).
+
+## License
+
+ISC. See [LICENSE](LICENSE).
